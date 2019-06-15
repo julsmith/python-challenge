@@ -47,12 +47,23 @@ max_index = difference_array.index(max_val)
 min_val = min(difference_array)
 min_index = difference_array.index(min_val)
 
+file = open("results.txt", "w")
+file.write("Financial Analysis\n")
 print("Financial Analysis")
 print("-------------------")
+file.write("-------------------\n")
 print("Total Months: " + str(total))
+file.write("Total Months: " + str(total)+"\n")
 print("Total: " + str(sum))
+file.write("Total: " + str(sum)+"\n")
 print("Average Change: " + str(sum_of_average))
+file.write("Average Change: " + str(sum_of_average)+"\n")
 print("Greatest Increase in Profits: " +  str(data[max_index+2][0]) + " ($" +(str(max_val)) + ")" )
+file.write("Greatest Increase in Profits: " +  str(data[max_index+2][0]) + " ($" +(str(max_val)) + ")\n" )
 print("Greatest Decrease in Profits: " +  str(data[min_index+2][0]) + " ($" +(str(min_val)) + ")" )
+file.write("Greatest Decrease in Profits: " +  str(data[min_index+2][0]) + " ($" +(str(min_val)) + ")\n" ) 
+ 
+file.close() 
+
     
     
