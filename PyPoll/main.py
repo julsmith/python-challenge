@@ -18,7 +18,6 @@ with open(pybank_csv, "r") as f:
  
    
 # creates dictionary 
-
 i = 1
 unique_list_array = {}
 while i<len(data):
@@ -31,6 +30,7 @@ while i<len(data):
 unique_values = unique_list_array
 print(unique_values)
 
+## out of the dictionary get winner
 winner_list = max(unique_list_array.items(), key=lambda k: k[1])
 winner = winner_list[0]
 
@@ -50,9 +50,8 @@ for result in unique_list_array:
    if votes > winning_votes:
        winning_votes = votes
        win_candidate = result
-print(final_list)
-print(unique_candidates)
 
+## write file to the txt file
 final_summary  = "\n".join(final_list)
 print(final_summary)
 
